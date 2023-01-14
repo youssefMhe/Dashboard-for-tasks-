@@ -11,6 +11,42 @@ import {TbToolsOff} from "react-icons/tb";
 
 const Sidebar = (props) => (
     <div className={'sideBar'}>
+        <div className={'logoDiv flex'}>
+            <img src={logo} alt={"Logo Image"}/>
+        </div>
+
+        <div className={'menu'}>
+            <ul className={'navItem'}>
+                <li className={'navList'}>
+                    <AiOutlinePieChart className={'icon'}/>
+                </li>
+
+                <li className={'navList'}>
+                    <AiOutlineCalculator className={'icon'}/>
+                </li>
+
+                <li className={'navList'}>
+                    <BsFolderSymlink className={'icon'}/>
+                </li>
+
+                <li className={'navList'}>
+                    <BsBatteryCharging className={'icon'}/>
+                </li>
+
+                <li className={'navList'}>
+                    <BsChatDots className={'icon'}/>
+                </li>
+
+                <li className={'navList'}>
+                    <GiComputerFan className={'icon'}/>
+                </li>
+
+                <li className={'navList'}>
+                    <TbToolsOff className={'icon'}/>
+                </li>
+            </ul>
+
+        </div>
 
     </div>
 
