@@ -1,0 +1,96 @@
+:root {
+  /*Color*/
+  --yellowColor: #e1f296;
+  --lightGreenColor: #5aba8a;
+  --darkGreencolor: #01565b;
+  --textColor: #044561;
+  --h1Color: #012e33;
+  --cardColor: #4c9fa7;
+  --whiteColor: hsl(0, 0%, 100%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(224, 39%, 80%);
+
+  --h1FontSize: 2.5rem;
+  --h2FontSize: 1.25rem;
+  --h3Fontsize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestfontSize: .75rem;
+}
+
+.sideBar {
+  width: 6%;
+  height: auto;
+  display: grid;
+  align-items: flex-start;
+
+  .logoDiv {
+    padding: 1rem;
+    justify-content: center;
+
+    img {
+      width: 40px;
+    }
+  }
+
+  .menu {
+    width: 100%;
+
+    .navItem {
+      .navList {
+
+        position: relative;
+        display: grid;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        padding: 1rem 0;
+        cursor: pointer;
+        overflow: hidden;
+
+        &::after {
+          display: none;
+          position: absolute;
+          content: '';
+          top: 50%;
+          right: 0;
+          width: 3px;
+          height: 25%;
+          border-right: 10px;
+          transition: .4s ease;
+          background: var(--lightGreenColor);
+        }
+
+        &::before {
+          display: none;
+          position: absolute;
+          content: '';
+          bottom: 50%;
+          right: 0;
+          width: 3px;
+          height: 25%;
+          border-right: 10px;
+          transition: .4s ease;
+          background: var(--darkGreencolor);
+        }
+
+        .icon {
+          width: 100%;
+          color: var(--greyText);
+        }
+
+        &:hover {
+          &::after, &::before {
+            display: block;
+          }
+          .icon{
+            color: var(--darkGreencolor);
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
